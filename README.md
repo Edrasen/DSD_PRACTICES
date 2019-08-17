@@ -5,10 +5,13 @@ This repository contains some practices and projects related with digital system
 Here you´ll find all necessary to replicate all uploaded projects, and even to create your own ones.
 
 
-    --->  PDF file contains all information about the project including the schematical circuit design. 
+    --->    PDF file contains all information about the project including the schematical circuit design. 
   
-    --->  VHD file contains program which will be loaded on the SPLD device.
+    --->    VHD contains the pre-compiled code, which contains all the logical process that it´s made by the circuit.
+    
+    --->    JED file contains program which will be loaded on the SPLD device.
+    
   
-    --->  PIN file contains pin distributon information, which also you'll find on the RPT file.
+    --->    PIN file contains pin distributon information, which also you'll find on the RPT file.
   
  EARM.
