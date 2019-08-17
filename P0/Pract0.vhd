@@ -9,7 +9,6 @@ entity mux is port(
 	selector: in std_logic;
 	display: out std_logic_vector(6 downto 0)
 );
-
 end mux;
 
 ARCHITECTURE amux of mux is
