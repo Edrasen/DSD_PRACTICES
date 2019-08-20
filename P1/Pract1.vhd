@@ -20,12 +20,12 @@ architecture aff of ff is
 	process(CLK, selector(0))
 	begin
 		if selector(0) = '1' then	
-			 selector <= "100";
 			 qjk <= '0';
 			 qsr <= '0';
 			 qd <= '0';
 			 qt <= '0';
 	 	elsif CLK'event and CLK='1' then
+			--selector <= "100";
 			case(selector)is
 				when "000" => mux_out <= qjk;
 				when "001" => mux_out <= qt;
