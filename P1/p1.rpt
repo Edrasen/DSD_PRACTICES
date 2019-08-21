@@ -1,0 +1,344 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp VHDL Synthesis Compiler: Version 6.3 IR 35
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  p1.vhd
+Options:    -m -yu -e10 -w100 -o2 -yga -fP -fF -fN -v3 -yw -dc22v10 -ppalc22v10d-15pc -b p1.vhd -u p1.hie
+======================================================================
+
+vhdlfe V6.3 IR 35:  VHDL parser
+Tue Aug 20 21:27:43 2019
+
+Library 'work' => directory 'lc22v10'
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Library 'ieee' => directory 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work'
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+
+vhdlfe:  No errors.
+
+
+tovif V6.3 IR 35:  High-level synthesis
+Tue Aug 20 21:27:44 2019
+
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+p1.vhd (line 30, col 31):  Warning: (W479) 'qjk' should be referenced in the sensitivity list.
+p1.vhd (line 31, col 30):  Warning: (W479) 'qt' should be referenced in the sensitivity list.
+p1.vhd (line 32, col 30):  Warning: (W479) 'qd' should be referenced in the sensitivity list.
+p1.vhd (line 33, col 31):  Warning: (W479) 'qsr' should be referenced in the sensitivity list.
+p1.vhd (line 36, col 12):  Warning: (W479) 'mux_out' should be referenced in the sensitivity list.
+
+tovif:  No errors.  5 warnings.
+
+
+topld V6.3 IR 35:  Synthesis and optimization
+Tue Aug 20 21:27:44 2019
+
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+
+
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 8 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 2 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 0 wires.
+------------------------------------------------------
+Created 33 PLD nodes.
+
+topld:  No errors.
+
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN HEADER INFORMATION  (21:27:45)
+
+Input File(s): p1.pla
+Device       : C22V10
+Package      : palc22v10d-15pc
+ReportFile   : p1.rpt
+
+Program Controls:
+    COMMAND LANGUAGE_VHDL 
+    COMMAND PROPERTY BUS_HOLD ENABLE 
+
+Signal Requests:
+    GROUP USEPOL ALL
+    GROUP FLOAT ALL
+    GROUP SLOW_SLEW ALL
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (21:27:45)
+
+Messages:
+  Information: Process virtual 'qsrD'qsrD ... expanded.
+  Information: Process virtual 'qtD'qtD ... expanded.
+  Information: Process virtual 'qjkD'qjkD ... expanded.
+  Information: Process virtual 'qsr' ... converted to NODE.
+  Information: Process virtual 'qd' ... converted to NODE.
+  Information: Process virtual 'qt' ... converted to NODE.
+  Information: Process virtual 'qjk' ... converted to NODE.
+  Information: Optimizing logic using best output polarity for signals:
+         display(5) qjk.D qsr.D qt.D
+
+  Information: Selected logic optimization OFF for signals:
+         display(0) display(1) display(2) display(3) display(4) qd.D qd.AR
+         qd.C qjk.AR qjk.C qsr.AR qsr.C qt.AR qt.C
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.3 IR 35
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (21:27:45)
+
+Messages:
+  Information: Optimizing Banked Preset/Reset requirements.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Equations" icon=FILE_RPT_EQUATION>
+DESIGN EQUATIONS           (21:27:45)
+</CYPRESSTAG>
+
+    display(0) =
+          display(5) 
+
+    display(1) =
+          display(5) 
+
+    display(2) =
+          display(5) 
+
+    display(3) =
+          VCC
+
+    display(4) =
+          VCC
+
+    /display(5) =
+          qsr.Q * /selector(0) * selector(1) * selector(2) 
+        + qt.Q * /selector(0) * /selector(1) * selector(2) 
+        + qd.Q * /selector(0) * selector(1) * /selector(2) 
+        + qjk.Q * /selector(0) * /selector(1) * /selector(2) 
+
+    qd.D =
+          d 
+
+    qd.AR =
+          selector(0) 
+
+    qd.SP =
+          GND
+
+    qd.C =
+          clk 
+
+    qjk.D =
+          /k * qjk.Q 
+        + j * /qjk.Q 
+
+    qjk.AR =
+          selector(0) 
+
+    qjk.SP =
+          GND
+
+    qjk.C =
+          clk 
+
+    qsr.D =
+          qsr.Q * /r 
+        + s 
+
+    qsr.AR =
+          selector(0) 
+
+    qsr.SP =
+          GND
+
+    qsr.C =
+          clk 
+
+    qt.D =
+          /qt.Q * t 
+        + qt.Q * /t 
+
+    qt.AR =
+          selector(0) 
+
+    qt.SP =
+          GND
+
+    qt.C =
+          clk 
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN RULE CHECK          (21:27:45)
+
+Messages:
+                 None.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Pinout" icon=FILE_RPT_PINOUT>
+PINOUT INFORMATION   (21:27:45)
+</CYPRESSTAG>
+Messages:
+  Information: Checking for duplicate NODE logic.
+                 None.
+
+
+                                 C22V10
+                 __________________________________________
+            clk =| 1|                                  |24|* not used       
+              t =| 2|                                  |23|= (qt)           
+              s =| 3|                                  |22|= (qjk)          
+              r =| 4|                                  |21|= display(4)     
+    selector(2) =| 5|                                  |20|= display(2)     
+    selector(1) =| 6|                                  |19|= display(0)     
+    selector(0) =| 7|                                  |18|= display(1)     
+              k =| 8|                                  |17|= display(3)     
+              j =| 9|                                  |16|= (qd)           
+              d =|10|                                  |15|= (qsr)          
+       not used *|11|                                  |14|= display(5)     
+       not used *|12|                                  |13|* not used       
+                 __________________________________________
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Utilization" icon=FILE_RPT_UTILIZATION>
+RESOURCE UTILIZATION (21:27:45)
+</CYPRESSTAG>
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | Dedicated Inputs   |    9  |   11  |
+                 | Clock/Inputs       |    1  |    1  |
+                 | I/O Macrocells     |   10  |   10  |
+                 ______________________________________
+                                          20  /   22   = 90  %
+
+
+  Information: Output Logic Product Term Utilization.
+
+                  Node#  Output Signal Name  Used   Max
+                 ________________________________________
+                 | 14  |  display(5)      |   4  |   8  |
+                 | 15  |  qsr             |   2  |  10  |
+                 | 16  |  qd              |   1  |  12  |
+                 | 17  |  display(3)      |   1  |  14  |
+                 | 18  |  display(1)      |   1  |  16  |
+                 | 19  |  display(0)      |   1  |  16  |
+                 | 20  |  display(2)      |   1  |  14  |
+                 | 21  |  display(4)      |   1  |  12  |
+                 | 22  |  qjk             |   2  |  10  |
+                 | 23  |  qt              |   2  |   8  |
+                 | 25  |  Unused          |   0  |   1  |
+                 ________________________________________
+                                             16  / 121   = 13  %
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+JEDEC ASSEMBLE             (21:27:45)
+
+Messages:
+  Information: Output file 'p1.pin' created.
+  Information: Output file 'p1.jed' created.
+
+  Usercode:    
+  Checksum:    7BE2
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully at 21:27:45
