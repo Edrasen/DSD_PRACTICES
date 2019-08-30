@@ -1,33 +1,31 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.all;
 
-entity mealy is port
-(
-	x, clk, clr: in std_logic;
-	display : out std_logic_vector(0 to 5)
-);
+ENTITY mealy is port(
+	CLK, CLR, X	:in std_logic;
+	display		:out std_logic_vector(6 downto 0)
+ 	);
 attribute pin_numbers of mealy:entity is
-"display(0):14, display(1):15, display(2):16, display(3):17, display(4):18, display(5):19";
+"CLK:1, CLR:2, X:3";
 end mealy;
-	
-architecture amealy of mealy is
-	SIGNAL q0, q1, d0, d1, y: std_logic;
-	begin
-	process(clk, clr)
-	begin
-	if(clr = '1') then
-		display <= "111110";
-	elsif clk'event and clk='1' then
-		d1 <= ((not(q1) and q0 and x) or ((not q0) and q1));
-		d0 <= (((not q1) and (not q0) and x) or (q1 and (not q0) and (not x)));
-		q0 <= d0;
-		q1 <= d1;
-		y <= (q0 and q1 and x);
-	end if;
-	case y is
-		when '1'=> display <= "110111";
-		when '0'=> display <= "001111";
-		when others => display <= "111110";
-	end case;
-	end process;
-end amealy;
+
+ARCHITECTURE amealy of mealy is
+	signal D0, D1, Q0, Q1, Y: std_logic;
+BEGIN
+	PROCESS(CLK, CLR)
+	BEGIN
+	if(CLR = '1') then
+		Q0 <= '0';
+		Q1 <= '0';
+	elsif(CLK' EVENT AND CLK = '1') then
+		Q1 <= ((NOT Q1) AND Q0 AND X) OR ((NOT Q0) AND Q1);
+		Q0 <= ((NOT Q1) AND (NOT Q0) AND X) OR (Q1 AND (NOT Q0) AND (NOT X));
+		end if;
+	Y <= Q0 AND Q1 AND X;
+	CASE (Y) is
+		when '1' => display <= "1110111";
+		when others => display <= "1001111";
+	END CASE;
+	END PROCESS;
+END amealy;
