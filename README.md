@@ -11,6 +11,6 @@ Here you´ll find all necessary to replicate all uploaded projects, and even to 
     
     --->    JED file contains program which will be loaded on the SPLD device.
   
-    --->    PIN file contains pin distributon information, which also you'll find on the RPT file.
+    --->    PIN file contains pin distribution, which also you'll find on the RPT file.
   
  EARM.
