@@ -31,13 +31,20 @@ begin
 			else
 				if(ud = '1') then 
 					q <= q + 1;
+					case (q) is
+						when (others => '1' => y <= '1';
+						when others => y <= '0'; 
+					end case;
 			   	else
 					q <= q - 1;
+					case (q) is
+						when (others => '0' => y <= '1';
+						when others => y <= '0'; 
+					end case;
 				end if;
 		    end if;
 		end if;
 	end if;
-y <= q(0) and q(1) and q(2) and q(3) and q(4) and q(5) and q(6);
 end process;
 end architecture;
 
