@@ -1,0 +1,12 @@
+Cypress Package: palc22v10d-15pc  PinOut File: p5.pin
+
+This file was created on 09/12/2019 at 09:21:26 
+by PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+==========
+clk gclk <> Enabled Normal 1 <> [User] 
+clr in <> Enabled Normal 2 <> [User] 
+en in <> Enabled Normal 3 <> [Auto] 
+q(0) inout <> Enabled Normal 14 <> [User] 
+q(1) inout <> Enabled Normal 15 <> [User] 
+q(2) inout <> Enabled Normal 16 <> [User] 
