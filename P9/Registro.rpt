@@ -1,0 +1,447 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp VHDL Synthesis Compiler: Version 6.3 IR 35
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  Registro.vhd
+Options:    -m -yu -e10 -w100 -o2 -ygs -fP -v10 -dc22v10 -ppalc22v10d-15pc -b Registro.vhd -u Practica12.hie
+======================================================================
+
+vhdlfe V6.3 IR 35:  VHDL parser
+Sun Oct 20 16:56:18 2019
+
+Library 'work' => directory 'lc22v10'
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Library 'ieee' => directory 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work'
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+
+vhdlfe:  No errors.
+
+
+tovif V6.3 IR 35:  High-level synthesis
+Sun Oct 20 16:56:18 2019
+
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+
+tovif:  No errors.
+
+
+topld V6.3 IR 35:  Synthesis and optimization
+Sun Oct 20 16:56:18 2019
+
+Linking 'C:\Archivos de programa\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Archivos de programa\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+State variable 'act' is represented by a Bit_vector (0 to 1).
+State encoding (sequential) for 'act' is:
+	e0 :=	b"00";
+	e1 :=	b"01";
+	e2 :=	b"10";
+State variable 'sig' is represented by a Bit_vector (0 to 1).
+State encoding (sequential) for 'sig' is:
+	e0 :=	b"00";
+	e1 :=	b"01";
+	e2 :=	b"10";
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+
+
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 19 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 2 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 10.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 0 wires.
+------------------------------------------------------
+Created 51 PLD nodes.
+
+topld:  No errors.
+
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN HEADER INFORMATION  (16:56:19)
+
+Input File(s): Registro.pla
+Device       : C22V10
+Package      : palc22v10d-15pc
+ReportFile   : Registro.rpt
+
+Program Controls:
+    COMMAND LANGUAGE_VHDL 
+    COMMAND PROPERTY BUS_HOLD ENABLE 
+
+Signal Requests:
+    GROUP USEPOL ALL
+    GROUP FAST_SLEW ALL
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (16:56:19)
+
+Messages:
+  Information: Process virtual 'actSBV_1'actSBV_1 ... expanded.
+  Information: Process virtual '\a(0)D\'\a(0)D\ ... expanded.
+  Information: Process virtual '\a(1)D\'\a(1)D\ ... expanded.
+  Information: Process virtual '\a(2)D\'\a(2)D\ ... expanded.
+  Information: Process virtual '\a(3)D\'\a(3)D\ ... expanded.
+  Information: Process virtual '\a(4)D\'\a(4)D\ ... expanded.
+  Information: Process virtual '\a(5)D\'\a(5)D\ ... expanded.
+  Information: Process virtual 'sigSBV_1'sigSBV_1 ... expanded.
+  Information: Process virtual 'sigSBV_0'sigSBV_0 ... expanded.
+  Information: Process virtual 'actSBV_0'actSBV_0 ... expanded.
+  Information: Process virtual 'ea' ... converted to NODE.
+  Information: Optimizing logic using best output polarity for signals:
+         a(0).D a(1).D a(2).D a(3).D a(4).D a(5).D ea.D ec.D
+
+  Information: Selected logic optimization OFF for signals:
+         a(0).AR a(0).C a(1).AR a(1).C a(2).AR a(2).C a(3).AR a(3).C a(4).AR
+         a(4).C a(5).AR a(5).C ea.AR ea.C eb ec.AR ec.C lb
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.3 IR 35
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (16:56:19)
+
+Messages:
+  Information: Optimizing Banked Preset/Reset requirements.
+  Information: Selecting D register equation as minimal for signal ec
+  Information: Selecting D register equation as minimal for signal a(5)
+  Information: Selecting D register equation as minimal for signal a(4)
+  Information: Selecting D register equation as minimal for signal a(3)
+  Information: Selecting D register equation as minimal for signal a(2)
+  Information: Selecting D register equation as minimal for signal a(1)
+  Information: Selecting D register equation as minimal for signal a(0)
+  Information: Inverting Preset/Reset & output logic polarity for ea.
+  Information: Selecting D register equation as minimal for signal ea
+  Information: Optimizing logic without changing polarity for signals:
+         a(0).D a(1).D a(2).D a(3).D a(4).D a(5).D ea.D ec.D
+
+  Information: Selected logic optimization OFF for signals:
+         a(0).AR a(0).SP a(0).C a(1).AR a(1).SP a(1).C a(2).AR a(2).SP a(2).C
+         a(3).AR a(3).SP a(3).C a(4).AR a(4).SP a(4).C a(5).AR a(5).SP a(5).C
+         ea.AR ea.SP ea.C eb ec.AR ec.SP ec.C lb
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.3 IR 35
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+OPTIMIZATION OPTIONS       (16:56:19)
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Equations" icon=FILE_RPT_EQUATION>
+DESIGN EQUATIONS           (16:56:19)
+</CYPRESSTAG>
+
+    a(0).D =
+          dato(0) * /ea.Q * /ec.Q * /ini 
+        + a(0).Q * /ea.Q * ini 
+        + a(0).Q * /ea.Q * ec.Q 
+        + a(1).Q * ea.Q 
+
+    a(0).AR =
+          clr 
+
+    a(0).SP =
+          GND
+
+    a(0).C =
+          clk 
+
+    a(1).D =
+          dato(1) * /ea.Q * /ec.Q * /ini 
+        + a(1).Q * /ea.Q * ini 
+        + a(1).Q * /ea.Q * ec.Q 
+        + a(2).Q * ea.Q 
+
+    a(1).AR =
+          clr 
+
+    a(1).SP =
+          GND
+
+    a(1).C =
+          clk 
+
+    a(2).D =
+          dato(2) * /ea.Q * /ec.Q * /ini 
+        + a(2).Q * /ea.Q * ini 
+        + a(2).Q * /ea.Q * ec.Q 
+        + a(3).Q * ea.Q 
+
+    a(2).AR =
+          clr 
+
+    a(2).SP =
+          GND
+
+    a(2).C =
+          clk 
+
+    a(3).D =
+          dato(3) * /ea.Q * /ec.Q * /ini 
+        + a(3).Q * /ea.Q * ini 
+        + a(3).Q * /ea.Q * ec.Q 
+        + a(4).Q * ea.Q 
+
+    a(3).AR =
+          clr 
+
+    a(3).SP =
+          GND
+
+    a(3).C =
+          clk 
+
+    a(4).D =
+          dato(4) * /ea.Q * /ec.Q * /ini 
+        + a(4).Q * /ea.Q * ini 
+        + a(4).Q * /ea.Q * ec.Q 
+        + a(5).Q * ea.Q 
+
+    a(4).AR =
+          clr 
+
+    a(4).SP =
+          GND
+
+    a(4).C =
+          clk 
+
+    a(5).D =
+          dato(5) * /ea.Q * /ec.Q * /ini 
+        + a(5).Q * /ea.Q * ini 
+        + a(5).Q * /ea.Q * ec.Q 
+
+    a(5).AR =
+          clr 
+
+    a(5).SP =
+          GND
+
+    a(5).C =
+          clk 
+
+    ea.D =
+          /ea.Q * /ec.Q * ini 
+        + a(5).Q * ea.Q 
+        + a(4).Q * ea.Q 
+        + a(3).Q * ea.Q 
+        + a(2).Q * ea.Q 
+        + a(1).Q * ea.Q 
+        + a(0).Q * ea.Q 
+
+    ea.AR =
+          clr 
+
+    ea.SP =
+          GND
+
+    ea.C =
+          clk 
+
+    eb =
+          a(0).Q * ea.Q 
+
+    ec.D =
+          /a(0).Q * /a(1).Q * /a(2).Q * /a(3).Q * /a(4).Q * /a(5).Q * ea.Q 
+        + ec.Q * ini 
+
+    ec.AR =
+          clr 
+
+    ec.SP =
+          GND
+
+    ec.C =
+          clk 
+
+    lb =
+          /ea.Q * /ec.Q 
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+DESIGN RULE CHECK          (16:56:19)
+
+Messages:
+                 None.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Pinout" icon=FILE_RPT_PINOUT>
+PINOUT INFORMATION   (16:56:19)
+</CYPRESSTAG>
+Messages:
+  Information: Checking for duplicate NODE logic.
+                 None.
+
+
+                                 C22V10
+                 __________________________________________
+            clk =| 1|                                  |24|* not used       
+            clr =| 2|                                  |23|= ec             
+            ini =| 3|                                  |22|= eb             
+       not used *| 4|                                  |21|= lb             
+       not used *| 5|                                  |20|= a(5)           
+        dato(0) =| 6|                                  |19|= a(4)           
+        dato(1) =| 7|                                  |18|= a(3)           
+        dato(2) =| 8|                                  |17|= a(2)           
+        dato(3) =| 9|                                  |16|= a(1)           
+        dato(4) =|10|                                  |15|= a(0)           
+        dato(5) =|11|                                  |14|= (ea)           
+       not used *|12|                                  |13|* not used       
+                 __________________________________________
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+<CYPRESSTAG name="Utilization" icon=FILE_RPT_UTILIZATION>
+RESOURCE UTILIZATION (16:56:19)
+</CYPRESSTAG>
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | Dedicated Inputs   |    8  |   11  |
+                 | Clock/Inputs       |    1  |    1  |
+                 | I/O Macrocells     |   10  |   10  |
+                 ______________________________________
+                                          19  /   22   = 86  %
+
+
+  Information: Output Logic Product Term Utilization.
+
+                  Node#  Output Signal Name  Used   Max
+                 ________________________________________
+                 | 14  |  ea              |   7  |   8  |
+                 | 15  |  a(0)            |   4  |  10  |
+                 | 16  |  a(1)            |   4  |  12  |
+                 | 17  |  a(2)            |   4  |  14  |
+                 | 18  |  a(3)            |   4  |  16  |
+                 | 19  |  a(4)            |   4  |  16  |
+                 | 20  |  a(5)            |   3  |  14  |
+                 | 21  |  lb              |   1  |  12  |
+                 | 22  |  eb              |   1  |  10  |
+                 | 23  |  ec              |   2  |   8  |
+                 | 25  |  Unused          |   0  |   1  |
+                 ________________________________________
+                                             34  / 121   = 28  %
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        PLA2JED.EXE    31/03/2000  [v4.02 ] 6.3 IR 35
+
+JEDEC ASSEMBLE             (16:56:19)
+
+Messages:
+  Information: Output file 'Registro.pin' created.
+  Information: Output file 'Registro.jed' created.
+
+  Usercode:    
+  Checksum:    E0F1
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully at 16:56:19
